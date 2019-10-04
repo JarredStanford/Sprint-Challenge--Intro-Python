@@ -24,38 +24,38 @@ humans = [
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
 print("Starts with D:")
-a = [Human.name for Human in humans if Human.name.startswith('D')]
+a = [human.name for human in humans if human.name.startswith('D')]
 print(a)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = [Human.name for Human in humans if Human.name.endswith('e')]
+b = [human.name for human in humans if human.name.endswith('e')]
 print(b)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
 letters = ('C', 'D', 'E', 'F', 'G')
-c = [Human.name for Human in humans if Human.name.startswith(letters)]
+c = [human.name for human in humans if human.name.startswith(letters)]
 print(c)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
 print("Ages plus 10:")
-d = [Human.age + 10 for Human in humans]
+d = [human.age + 10 for human in humans]
 print(d)
 
 # Write a list comprehension that creates a list of strings which are the name
 # joined to the age with a hyphen, for example "David-31", for all humans.
 print("Name hyphen age:")
-e = [f'{Human.name}-{Human.age}' for Human in humans]
+e = [f'{human.name}-{human.age}' for human in humans]
 print(e)
 
 # Write a list comprehension that creates a list of tuples containing name and
 # age, for example ("David", 31), for everyone between the ages of 27 and 32,
 # inclusive.
 print("Names and ages between 27 and 32:")
-f = [(f'{Human.name}', Human.age) for Human in humans if 32 >= Human.age >= 27]
+f = [(f'{human.name}', human.age) for human in humans if 32 >= human.age >= 27]
 print(f)
 
 # Write a list comprehension that creates a list of new Humans like the old
@@ -68,5 +68,5 @@ print(g)
 # Write a list comprehension that contains the square root of all the ages.
 print("Square root of ages:")
 import math
-h = [math.sqrt(Human.age) for Human in humans]
+h = [math.sqrt(human.age) for human in humans]
 print(h)
